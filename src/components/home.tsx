@@ -20,87 +20,80 @@ const Home = () => {
   const [showStartMenu, setShowStartMenu] = useState(false);
   const [windows, setWindows] = useState<WindowData[]>([
     {
-      id: "portfolio",
-      title: "portfolio.txt - Notepad",
-      type: "notepad",
-      content: (
-        <div className="p-2 font-mono text-sm">
-          <h1 className="text-lg mb-4">My Portfolio</h1>
-          <p className="mb-2">Name: John Doe</p>
-          <p className="mb-2">Title: Frontend Developer</p>
-          <p className="mb-4">Email: john.doe@example.com</p>
-
-          <h2 className="text-md font-bold mb-2">Skills:</h2>
-          <ul className="list-disc pl-5 mb-4">
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>CSS/Tailwind</li>
-            <li>JavaScript</li>
-            <li>UI/UX Design</li>
-          </ul>
-
-          <h2 className="text-md font-bold mb-2">About Me:</h2>
-          <p className="mb-4">
-            I'm a passionate frontend developer with 5 years of experience
-            building responsive and user-friendly web applications. I enjoy
-            working with modern technologies while appreciating the nostalgia of
-            classic interfaces.
-          </p>
-
-          <h2 className="text-md font-bold mb-2">Contact:</h2>
-          <p>GitHub: github.com/johndoe</p>
-          <p>LinkedIn: linkedin.com/in/johndoe</p>
-        </div>
-      ),
-      isOpen: false,
-      isMinimized: false,
-      zIndex: 0,
-      position: { x: 50, y: 50 },
-      size: { width: 500, height: 400 },
-    },
-    {
       id: "resume",
       title: "resume.doc - Document Viewer",
       type: "document",
       content: (
         <div className="p-2 font-mono text-sm">
-          <h1 className="text-lg font-bold mb-4 text-center">RESUME</h1>
+          <h1 className="text-lg font-bold mb-4 text-center">NIRANJAN SONAWANE</h1>
+          <p className="mb-2 font-bold">Web Developer</p>
+          <p className="mb-2">Email: sonawaneniranjan28@gmail.com</p>
+          <p className="mb-2">Location: Pune, Maharashtra</p>
+          <p className="mb-2">Phone: +91 9075554643</p>
+          <p className="mb-2">
+            <a href="https://www.linkedin.com/in/niranjan-sonawane-59079728a/" target="_blank" rel="noopener noreferrer">LinkedIn</a> | 
+            <a href="https://github.com/Gsish" target="_blank" rel="noopener noreferrer"> GitHub</a>
+          </p>
+          <hr className="my-2 border-slate-300" />
 
-          <h2 className="text-md font-bold mb-2">JOHN DOE</h2>
+          <h2 className="text-md font-bold mb-2">PROFESSIONAL SUMMARY:</h2>
           <p className="mb-4">
-            Frontend Developer | john.doe@example.com | (555) 123-4567
+            Skilled backend developer with strong experience in Python, Golang building secure and scalable systems. Passionate about creating fast, reliable APIs and deploying efficient cloud-ready architectures for real-world applications.
           </p>
 
-          <h2 className="text-md font-bold mb-2">EXPERIENCE</h2>
+          <h2 className="text-md font-bold mb-2">AREAS OF EXPERTISE:</h2>
+          <ul className="list-disc pl-5 mb-4">
+            <li>Back-end web development</li>
+            <li>GENAI: langchain, OpenAI, Mistral, Gemini</li>
+            <li>Languages: Golang, Python, C++, Java</li>
+            <li>Deployment: AWS, Nginx, Docker, Vercel, Render</li>
+            <li>Frameworks: Django, FastAPI, Gin</li>
+            <li>Foundation in Data Science and Machine Learning</li>
+            <li>Tools: Postman, Cursor</li>
+            <li>Database: MongoDB</li>
+          </ul>
+
+          <h2 className="text-md font-bold mb-2">PROFESSIONAL EXPERIENCE:</h2>
           <div className="mb-3">
-            <p className="font-bold">Senior Frontend Developer</p>
-            <p>Tech Company Inc. | 2020 - Present</p>
+            <p className="font-bold">Thindex Technologies</p>
+            <p>System Engineer | 2 months</p>
             <ul className="list-disc pl-5">
-              <li>Developed responsive web applications using React</li>
-              <li>
-                Implemented UI/UX improvements resulting in 25% increase in user
-                engagement
-              </li>
-              <li>Led a team of 3 junior developers</li>
+              <li>Testing and deploying Python microservices</li>
+              <li>Migrating legacy Python code to Golang (Gin)</li>
+              <li>Worked on AWS and Nginx</li>
+              <li>Collaborated with senior developers to update the website and create new features</li>
+            </ul>
+          </div>
+          <div className="mb-3">
+            <p className="font-bold">Freelance Project</p>
+            <p>Backend Developer | Present</p>
+            <ul className="list-disc pl-5">
+              <li>Built an Ecommerce website with Golang (Gin) and React</li>
+              <li>Reduced AWS costs by 25% by optimizing traffic routing and serverless deployment</li>
+              <li>Created guides to document the processes and maintain business continuity</li>
             </ul>
           </div>
 
+          <h2 className="text-md font-bold mb-2">RELEVANT PROJECTS:</h2>
           <div className="mb-3">
-            <p className="font-bold">Frontend Developer</p>
-            <p>Web Solutions LLC | 2018 - 2020</p>
+            <p className="font-bold">Business Helper & Stock Market Analyzer</p>
             <ul className="list-disc pl-5">
-              <li>
-                Built interactive user interfaces with JavaScript and React
-              </li>
-              <li>
-                Collaborated with designers to implement pixel-perfect designs
-              </li>
+              <li>Built with Python (Django REST Framework), React Vite</li>
+              <li>Analyze market of particular company</li>
+              <li>AI-based Search Engine</li>
+            </ul>
+          </div>
+          <div className="mb-3">
+            <p className="font-bold">Hybrid AI Works Offline/Online</p>
+            <ul className="list-disc pl-5">
+              <li>Chatbot with RAG support for PDFs and code templates</li>
+              <li>Clean UI, chat with LLM offline as well as online</li>
             </ul>
           </div>
 
-          <h2 className="text-md font-bold mb-2">EDUCATION</h2>
-          <p className="font-bold">Bachelor of Science in Computer Science</p>
-          <p>University of Technology | 2014 - 2018</p>
+          <h2 className="text-md font-bold mb-2">EDUCATION:</h2>
+          <p className="font-bold">2024 - 2028 | Pune University, Smt. Kashibai Navale College of Engineering</p>
+          <p>Bachelor of Engineering CGPA: 8.5</p>
         </div>
       ),
       isOpen: false,
@@ -115,35 +108,29 @@ const Home = () => {
       type: "notepad",
       content: (
         <div className="p-2 font-mono text-sm">
-          <h1 className="text-lg mb-4">My Projects</h1>
-
+          <h1 className="text-lg mb-4">Projects</h1>
           <div className="mb-4">
-            <h2 className="text-md font-bold">Windows 98 Portfolio</h2>
-            <p className="mb-1">
-              A nostalgic portfolio website built with React and Vite
-            </p>
-            <p className="mb-1">
-              Technologies: React, TypeScript, 98.css, Tailwind
-            </p>
-            <p>github.com/johndoe/win98-portfolio</p>
+            <h2 className="text-md font-bold">Business Helper & Stock Market Analyzer</h2>
+            <ul className="list-disc pl-5">
+              <li>Built with Python (Django REST Framework), React Vite</li>
+              <li>Analyze market of particular company</li>
+              <li>AI-based Search Engine</li>
+            </ul>
           </div>
-
           <div className="mb-4">
-            <h2 className="text-md font-bold">E-commerce Dashboard</h2>
-            <p className="mb-1">
-              Admin dashboard for managing online store inventory
-            </p>
-            <p className="mb-1">Technologies: React, Redux, Material UI</p>
-            <p>github.com/johndoe/ecommerce-dashboard</p>
+            <h2 className="text-md font-bold">Hybrid AI Works Offline/Online</h2>
+            <ul className="list-disc pl-5">
+              <li>Chatbot with RAG support for PDFs and code templates</li>
+              <li>Clean UI, chat with LLM offline as well as online</li>
+            </ul>
           </div>
-
           <div className="mb-4">
-            <h2 className="text-md font-bold">Weather App</h2>
-            <p className="mb-1">
-              Real-time weather application with location services
-            </p>
-            <p className="mb-1">Technologies: JavaScript, OpenWeather API</p>
-            <p>github.com/johndoe/weather-app</p>
+            <h2 className="text-md font-bold">E-commerce Website</h2>
+            <ul className="list-disc pl-5">
+              <li>Built with Golang (Gin) and React</li>
+              <li>Reduced AWS costs by 25% by optimizing traffic routing and serverless deployment</li>
+              <li>Created guides to document the processes and maintain business continuity</li>
+            </ul>
           </div>
         </div>
       ),
@@ -160,11 +147,6 @@ const Home = () => {
 
   // Desktop icons configuration
   const desktopIcons = [
-    {
-      id: "portfolio",
-      label: "Portfolio.txt",
-      iconSrc: "https://win98icons.alexmeub.com/icons/png/notepad-0.png",
-    },
     {
       id: "resume",
       label: "Resume.doc",
