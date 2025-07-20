@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css2?family=MS+Sans+Serif:wght@400;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "MS Sans Serif", sans-serif, system-ui;
+    font-size: 11px;
+  }
+
+  /* Windows 98 specific styles */
+  .win98-button {
+    background: #c0c0c0;
+    border: 1px outset #c0c0c0;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 11px;
+    transition: all 0.1s ease;
+  }
+
+  .win98-button:hover {
+    background: #dfdfdf;
+  }
+
+  .win98-button:active {
+    border: 1px inset #c0c0c0;
+    background: #a0a0a0;
+  }
+
+  .win98-window {
+    background: #c0c0c0;
+    border: 2px outset #c0c0c0;
+    font-family: "MS Sans Serif", sans-serif;
+  }
+
+  .win98-titlebar {
+    background: linear-gradient(90deg, #000080, #1084d0);
+    color: white;
+    font-size: 11px;
+    height: 18px;
+  }
+
+  /* Smooth transitions */
+  * {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Disable text selection on UI elements */
+  .select-none {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  /* Active button state */
+  .active\:border-inset:active {
+    border: 1px inset #c0c0c0 !important;
+  }
+
+  /* Windows 98 Start Menu Animation */
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .start-menu {
+    animation: slideUp 0.15s ease-out;
+  }
+
+  /* Classic Windows 98 wallpaper pattern */
+  .win98-wallpaper {
+    background-image: radial-gradient(
+        circle at 25% 25%,
+        rgba(255, 255, 255, 0.1) 1px,
+        transparent 1px
+      ),
+      radial-gradient(
+        circle at 75% 75%,
+        rgba(255, 255, 255, 0.05) 1px,
+        transparent 1px
+      );
+    background-size: 8px 8px;
+  }
+
+  /* Enhance button hover effects */
+  .win98-button:hover {
+    background: #dfdfdf;
+    box-shadow: inset 1px 1px 0 rgba(255, 255, 255, 0.8);
+  }
+
+  /* Desktop icon glow effect */
+  .desktop-icon:hover {
+    filter: brightness(1.1);
+    text-shadow: 0 0 4px rgba(255, 255, 255, 0.8);
+  }
+
+  /* Mobile responsive styles */
+  @media (max-width: 768px) {
+    body {
+      font-size: 14px;
+    }
+
+    .win98-titlebar {
+      height: 24px;
+      font-size: 14px;
+    }
+
+    .win98-button {
+      font-size: 14px;
+      padding: 4px 8px;
+    }
+
+    /* Larger touch targets for mobile */
+    .desktop-icon {
+      padding: 8px;
+      min-width: 60px;
+      min-height: 60px;
+    }
+
+    .desktop-icon .text-3xl {
+      font-size: 2rem;
+    }
+
+    .desktop-icon .text-xs {
+      font-size: 12px;
+    }
+
+    /* Taskbar adjustments */
+    .taskbar-button {
+      min-height: 32px;
+      font-size: 12px;
+    }
+
+    /* Window controls larger for touch */
+    .window-control {
+      width: 24px !important;
+      height: 20px !important;
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    body {
+      font-size: 16px;
+    }
+
+    .win98-titlebar {
+      height: 28px;
+      font-size: 16px;
+    }
+
+    /* Even larger touch targets for small screens */
+    .desktop-icon {
+      padding: 12px;
+      min-width: 80px;
+      min-height: 80px;
+    }
+
+    .desktop-icon .text-3xl {
+      font-size: 2.5rem;
+    }
+
+    .desktop-icon .text-xs {
+      font-size: 14px;
+    }
+
+    /* Taskbar adjustments for small screens */
+    .taskbar-button {
+      min-height: 36px;
+      font-size: 14px;
+    }
+
+    /* Window controls even larger */
+    .window-control {
+      width: 28px !important;
+      height: 24px !important;
+      font-size: 16px;
+    }
+  }
+}
